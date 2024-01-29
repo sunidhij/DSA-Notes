@@ -19,14 +19,17 @@ vector<int> prefix;
             prefix.push_back(l);
         }
 
-//Approach 3 - Kadane's Algorithm
+//Approach 3 - Kadane's Algorithm 
+//we maintain a running sum
+//we ignore negative sum and take it as 0
 //Sliding window
 int cs =0; //current sum
-int largest =0;
+int largest =0;  //max sum
 for(int i =0; i<n;i++){
 cs = cs+ arr[i];
 if(cs<0){
   cs=0;
 }
+      largest = max(largest,cs);  
   
 }

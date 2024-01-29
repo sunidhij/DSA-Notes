@@ -83,8 +83,8 @@ for(int i =0; i<n; i++){
 vector<int> freq(largest+1,0);
 
 //update the freq array
-for(int x: a){
-  freq[x]++;
+for(int i =0; i<n ; i++){
+  freq[a[i]]++;
 }
 
 //put back elements from freq into original array
